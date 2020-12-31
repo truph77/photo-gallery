@@ -1,8 +1,8 @@
-import * as firebase from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/storage";
 import "firebase/firestore";
 
-// Your web app's Firebase configuration
+// Your web app's configuration
 var firebaseConfig = {
   apiKey: "AIzaSyA7t8q5uHXaFx5OwlWtf2m4f-H29wBgd18",
   authDomain: "photo-gallery-1957d.firebaseapp.com",

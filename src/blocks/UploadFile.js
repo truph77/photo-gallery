@@ -5,6 +5,10 @@ const UploadFile = styled.div`
     margin: 2rem;
     text-align: center;
   }
+
+  .error {
+    color: red;
+  }
 `;
 
 export default UploadFile;
