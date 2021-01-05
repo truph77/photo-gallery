@@ -1,4 +1,5 @@
 import "./App.css";
+import ImagesGrid from "./components/ImagesGrid";
 import Title from "./components/Title";
 import UploadFile from "./components/UploadFile";
 
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Title />
       <UploadFile />
+      <ImagesGrid />
     </div>
   );
 }

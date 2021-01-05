@@ -11,7 +11,6 @@ const UploadFileComponents = () => {
 
   const changeHandler = (e) => {
     let selected = e.target.files[0];
-    console.log(selected);
 
     if (selected && types.includes(selected.type)) {
       setFile(selected);
@@ -26,7 +25,7 @@ const UploadFileComponents = () => {
     <UploadFile>
       <form className="upload-file">
         <div className="upload--icon">
-          <label for="file-input" className="upload--icon-plus">
+          <label htmlFor="file-input" className="upload--icon-plus">
             <AiOutlinePlusCircle />
           </label>
           <input
