@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import UploadFile from "../blocks/UploadFile";
 import ProgressBar from "../components/progressBar";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const UploadFileComponents = () => {
   const [file, setFile] = useState(null);
@@ -17,15 +18,25 @@ const UploadFileComponents = () => {
       setError(null);
     } else {
       setFile(null);
-      setError("Opps, Please choose an image file (png or jpeg)!");
+      setError("Oops, Please choose an image file (png or jpeg)!");
     }
   };
 
   return (
     <UploadFile>
       <form className="upload-file">
-        <input type="file" onChange={changeHandler} />
-
+        <div className="upload--icon">
+          <label for="file-input" className="upload--icon-plus">
+            <AiOutlinePlusCircle />
+          </label>
+          <input
+            multiple
+            hidden={true}
+            id="file-input"
+            type="file"
+            onChange={changeHandler}
+          />
+        </div>
         <div className="outPut">
           {error && <div className="error">{error}</div>}
           {file && <div>{file.name}</div>}

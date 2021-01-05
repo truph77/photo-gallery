@@ -3,10 +3,11 @@ import styled from "styled-components";
 const ProgressBar = styled.div`
   .progress-bar {
     margin: 20px;
+    padding: 3px;
 
-    padding: 5px;
     color: red;
-    font-weight: bold;
+    background: #a59d45;
+    border-radius: 5px;
 
     transition: width 1s ease-in-out;
   }

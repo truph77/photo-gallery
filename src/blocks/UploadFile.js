@@ -9,6 +9,17 @@ const UploadFile = styled.div`
   .error {
     color: red;
   }
+
+  .upload--icon-plus {
+    font-size: 30px;
+    color: red;
+    cursor: pointer;
+  }
+
+  .upload--icon-plus svg:hover {
+    border-radius: 20px;
+    background: #dfce39;
+  }
 `;
 
 export default UploadFile;

@@ -20,7 +20,7 @@ const Title = styled.div`
 
   .title h2 {
     font-size: 2.6rem;
-    color: #827717;
+    color: #dfce39;
     padding: 2rem 0 1rem 0;
   }
 `;
