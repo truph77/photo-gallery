@@ -5,11 +5,11 @@ import useStorage from "../hook/useStorage";
 const ProgressBar = ({ file, setFile }) => {
   const { url, progress } = useStorage(file);
 
-  // useEffect(() => {
-  //   if (url) {
-  //     setFile(null);
-  //   }
-  // }, [url, setFile]);
+  useEffect(() => {
+    if (url) {
+      setFile(null);
+    }
+  }, [url, setFile]);
 
   return (
     <ProgressBarStyle>
