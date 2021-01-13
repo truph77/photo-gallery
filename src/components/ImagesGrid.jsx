@@ -2,7 +2,7 @@ import React from "react";
 import ImagesGridStyle from "../blocks/ImagesGrid";
 import useFireStore from "../hook/useFireStore";
 
-const ImagesGrid = () => {
+const ImagesGrid = ({ setSelectedImg }) => {
   const { docs } = useFireStore("images");
 
   console.log(docs);
@@ -11,8 +11,12 @@ const ImagesGrid = () => {
       <div className="images-grid">
         {docs &&
           docs.map((doc) => (
-            <div className="images-grid--wrap" key={doc.id}>
-              <img src={doc.url} alt="uploaded image" />
+            <div
+              className="images-grid--wrap"
+              key={doc.id}
+              onClick={() => setSelectedImg(doc.url)}
+            >
+              <img src={doc.url} alt="my world" />
             </div>
           ))}
       </div>
