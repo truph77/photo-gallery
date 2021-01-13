@@ -1,5 +1,6 @@
 import React from "react";
 import ModalStyled from "../blocks/Modal";
+import { motion } from "framer-motion";
 
 const Modal = ({ selectedImg, setSelectedImg }) => {
   const handleClick = (e) => {
@@ -10,9 +11,18 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
 
   return (
     <ModalStyled>
-      <div className="backdrop" onClick={handleClick}>
-        <img src={selectedImg} alt="pic modal" />
-      </div>
+      <motion.div
+        className="backdrop"
+        onClick={handleClick}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <motion.img
+          src={selectedImg}
+          alt="pic modal"
+          initial={{ y: "-100vh" }}
+        />
+      </motion.div>
     </ModalStyled>
   );
 };
